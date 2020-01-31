@@ -1,0 +1,276 @@
+/*--------------------CAROUSEL----------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding:0;
+    font: 10px Arial, sans-serif;
+    background-color: rgba(69, 69, 64);
+    
+}
+
+.platforms {
+
+    margin:  auto;
+    width: 250px;
+    height: 600px;
+    position: relative;
+    perspective: 600px;
+    perspective-origin: top;
+    text-align: center;
+
+
+}
+
+.carousel {
+    margin-top: 50%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.item {
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 5em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.a {
+    transform: rotateY(0deg) translateZ(250px);
+    background: transparent;
+}
+
+.b {
+    transform: rotateY(60deg) translateZ(250px);
+    background: transparent;
+}
+
+.c {
+    transform: rotateY(120deg) translateZ(250px);
+    background: transparent;
+}
+
+.d {
+    transform: rotateY(180deg) translateZ(250px);
+    background: transparent;
+}
+
+.e {
+    transform: rotateY(240deg) translateZ(250px);
+    background: transparent;
+}
+
+.f {
+    transform: rotateY(300deg) translateZ(250px);
+    background: transparent;
+}
+/*----------------------BUTTONS----------------*/
+.prev *{
+    position: absolute;
+    margin: 0;
+    margin-left: 20%;
+    padding: 0;
+    top: 300px;
+  }
+  .prev img, .next img{
+    width: 100px;
+    height: 100px;
+  }
+  .next *{
+    position: absolute;
+    margin: 0;
+    margin-left: 75%;
+    padding: 0;
+    top: 300px;
+  }
+  .next img:active, .prev img:active { 
+    width: 95px;
+    height: 95px;
+  }
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  #myBtn img{
+    width: 100px;
+    height: 100px; 
+  }
+/*----------------------TOPRATED----------------*/
+#toprated {
+    list-style-position: inside;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10%;
+}
+
+#toprated li {
+    display:inline-grid;
+    width: 200px;
+    padding: 10px;
+    height: 200px;
+    border: solid 0.25px grey;
+    margin:3px;
+}
+
+#toprated li img {
+    height: 140px;
+}
+#back{
+    float:right
+}
+/*------------------------------------------------------------------*/
+/*--------------------PLAYSTATAION VERSIONS MAIN--------------------*/
+.playstationVersions {
+    margin-top: 9%;
+    text-align: center;
+    background-color: rgba(69, 69, 64);
+    color: white;
+    position: relative;
+}
+
+.playstationVersions h2 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+
+.about p {
+    margin: 3% 10%;
+
+}
+/*----------------------------------------------------------------*/
+/*----------------------- PLAYSTATAION 1 -------------------------*/
+#playstation1 {
+    display:none;
+
+}
+#playstation1 #playstation1consolefoto img {
+    width: 350px;
+    height: 250px;
+}
+.playstation1Slider {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+/*------------------------------------------------------------------*/
+
+/*------------------------ PLAYSTATAION 2 --------------------------*/
+
+#playstation2 {
+        display:none;
+
+}
+
+#playstation2 #playstation2consolefoto img {
+    width: 350px;
+    height: 250px;
+}
+
+
+/*------------------------------------------------------------------*/
+
+/*--------------------- PLAYSTATAION PORTABLE ----------------------*/
+
+#playstationP {
+        display:none;
+
+}
+
+#playstationP #playstationPconsolefoto img {
+    width: 500px;
+    height: 250px;
+}
+
+/*------------------------------------------------------------------*/
+
+/*--------------------PLAYSTATAION 3----------------------*/
+
+#playstation3 {
+        display:none;
+
+}
+
+
+#playstation3 #playstation3consolefoto img {
+    width: 250px;
+    height: 300px;
+}
+.playstation3Slider {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+/*------------------------------------------------------------------*/
+
+/*--------------------PLAYSTATAION VITA----------------------*/
+
+#playstationVita {
+    text-align: center;
+    display:none;
+
+}
+
+
+#playstationVita #playstationVitaconsolefoto img {
+    width: 500px;
+    height: 300px;
+}
+.playstationVitaSlider {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    position: relative;
+}
+
+
+/*------------------------------------------------------------------*/
+
+/*--------------------PLAYSTATAION 4----------------------*/
+
+#playstation4 {
+    text-align: center;
+        display:none;
+
+}
+
+#playstation4 #playstation4consolefoto img {
+    width: 300px;
+    height: 300px;
+}
+
+#playstation4 .about h2 {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 0;
+
+}

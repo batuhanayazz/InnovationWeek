@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/java.js"></script>
+  <script src=js/GameConsole.js> </script> 
+  <script src="/js/p5.js"></script>
+  <script src="/js/p5.dom.min.js"></script>
+  <script src="/js/sketch.js"></script>
+</head>
+
+<body>
+
+  <!-------        CHOICE ROULETTE        ------->
+  <div class="platforms" id="platforms">
+    <div class="carousel">
+      <div class="item a">
+        <div class="ps1 showBlock" data-target="#playstation1">
+          <a id="platformplaystation1" href="#playstation1"><img src="fotos/ps1logo.png" alt=""></a>
+        </div>
+      </div>
+      | <div class="item b">
+        <div class="ps2 showBlock" data-target="#playstation2">
+          <a href="#playstation2" id="platformplaystation2"><img src="fotos/ps2.png" alt=""></a>
+        </div>
+      </div>
+      <div class="item c">
+        <div class="psp showBlock" data-target="#playstationP">
+          <a href="#playstationP"><img src="fotos/psp.png" alt=""></a>
+        </div>
+      </div>
+      <div class="item d">
+        <div class="ps3 showBlock" data-target="#playstation3">
+          <a href="#playstation3"><img src="fotos/ps3.png" alt=""></a>
+        </div>
+      </div>
+      <div class="item e">
+        <div class="vita showBlock" data-target="#playstationVita">
+          <a href="#playstationVita"><img src="fotos/vita.png" alt=""></a>
+        </div>
+      </div>
+      <div class="item f">
+        <div class="ps4 showBlock" data-target="#playstation4">
+          <a href="#playstation4"><img src="fotos/ps4.png" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-------       LEFT/RIGHT BUTTONS      ------->
+  <div class="next" title="">
+    <img src="/fotos/purebotton.png" alt="" onmouseover="this.src='/fotos/PlayStation_Right_button.png'"
+      onmouseout="this.src='/fotos/purebotton.png'"></div>
+  </div>
+  <div class="prev" title="">
+    <img src="/fotos/purebotton.png" alt="" onmouseover="this.src='/fotos/leftbutton.png'"
+      onmouseout="this.src='/fotos/purebotton.png'"></div>
+  </div>
+
+  <!--------------------------------------------->
+  <!------- INDIVIDUAL PAGES OF PLATFORMS ------->
+  <!--------------------------------------------->
+
+  <div class="playstationVersions">
+
+    <!--------------- PLAYSTATION 1 --------------->
+
+
+    <div id="playstation1">
+      <div id="playstation1consolefoto">
+        <img src="/fotos/ps-1-big.png" alt="">
+      </div>
+      <div id="about" class="about">
+        <h2></h2>
+      </div>
+      <div class="playstation1Slider">
+        <div class="slidecontainer">
+          <input type="range" min="1994" max="2003" value="1994" class="slider" id="sliderPs1">
+          <h2>TOP RATED IN YEAR <span id="yearValuePs1"></span></h2>
+        </div>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+    <!--------------- PLAYSTATION 2 --------------->
+
+    <div id="playstation2">
+      <div id="playstation2consolefoto">
+        <img src="/fotos/ps2-big.png" alt="" id="logo">
+      </div>
+      <div class="about">
+        <h2></h2>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+
+    <!------------ PLAYSTATION PORTABLE ----------->
+
+    <div id="playstationP">
+      <div id="playstationPconsolefoto">
+        <img src="/fotos/psp-big.png" alt="" id="logo">
+      </div>
+      <div class="about">
+        <h2></h2>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+
+    <!--------------- PLAYSTATION 3 --------------->
+
+    <div id="playstation3">
+      <div id="playstation3consolefoto">
+        <img src="/fotos/ps3-big.png" alt="" id="logo">
+      </div>
+      <div class="about">
+        <h2></h2>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+
+    <!------------- PLAYSTATION VITA -------------->
+
+    <div id="playstationVita">
+      <div id="playstationVitaconsolefoto">
+        <img src="/fotos/ps-vita-big.png" alt="" id="logo">
+      </div>
+      <div class="about">
+        <h2></h2>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+
+<!------------- PLAYSTATION 4 -------------->
+
+    <div id="playstation4">
+      <div id="playstation4consolefoto">
+        <img src="/fotos/ps4-big.png" alt="" id="logo">
+      </div>
+      <div class="about">
+        <h2></h2>
+      </div>
+      <div id="toprated">
+      </div>
+    </div>
+  </div>
+  <div onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="/fotos/purebotton.png" alt="" onmouseover="this.src='/fotos/PlayStation_Up_button.svg.png'"
+      onmouseout="this.src='/fotos/purebotton.png'"></div>
+  <script>
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  </div>
+</body>
+
+</html>
